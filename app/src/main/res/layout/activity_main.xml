@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchLinear"
+            android:visibility="gone">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:id="@+id/searchEditText"
+                android:hint="@string/search_hint"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableEnd="@drawable/ic_close"/>
+            
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/sortingLinear"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alphabetically"
+                android:textSize="16sp"
+                android:layout_weight="2"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alphabeticallyUp"
+                android:layout_weight="1.5"
+                android:src="@drawable/black_up"
+                android:contentDescription="@string/alphabeticaly_up_sort"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alphabeticallyDown"
+                android:layout_weight="1.5"
+                android:src="@drawable/black_down"
+                android:contentDescription="@string/alphabetically_down_sort"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_time"
+                android:textSize="14sp"
+                android:layout_weight="2"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeUp"
+                android:layout_weight="1.5"
+                android:src="@drawable/black_up"
+                android:contentDescription="@string/end_time_up_sort"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeDown"
+                android:layout_weight="1.5"
+                android:src="@drawable/black_down"
+                android:contentDescription="@string/end_time_down_sort"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/filterLayout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minValue"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/select_range_for_backers"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.33"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maxValue"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+            <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+                android:id="@+id/rangeSeekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/applyButton"
+                android:text="@string/apply"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        
+    </FrameLayout>
+    <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+        android:id="@+id/swipyrefreshlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srl_direction="bottom">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"/>
+
+    </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noData"
+        android:visibility="gone"
+        android:contentDescription="@string/no_data_image"/>
+</LinearLayout>

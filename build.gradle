@@ -1,0 +1,17 @@
+buildscript {
+    ext.power_mockito_version = "1.7.3"
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "com.neenbedankt.gradle.plugins:android-apt:1.4"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://raw.github.com/Raizlabs/maven-releases/master/releases" }
+    }
+}

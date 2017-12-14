@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Kick Starter</string>
+    <string name="app_label">search</string>
+    <string name="search_hint">Search by Project Name</string>
+    <string name="fetch_search_list">Fetching Search List...</string>
+    <string name="move_local_database">Moving to Local Database...</string>
+    <string name="alphabetically">Alphabetically:</string>
+    <string name="end_time">End Time:</string>
+    <string name="select_range_for_backers">Select Range for Backers</string>
+    <string name="apply">Apply</string>
+    <string name="no_data_image">No data image</string>
+    <string name="end_time_down_sort">End time Down sort</string>
+    <string name="end_time_up_sort">End time up sort</string>
+    <string name="alphabetically_down_sort">Alphabetically Down sort</string>
+    <string name="alphabeticaly_up_sort">Alphabeticaly up sort</string>
+    <string name="thumbnail">thumbnail image</string>
+    <string name="downloading_data_from_server">Downloading data from server...</string>
+    <string name="dummy_title">Dummy title</string>
+    <string name="owned_by">Owned By:</string>
+    <string name="amount">Amount:</string>
+    <string name="end">End:</string>
+</resources>
